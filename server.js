@@ -20,6 +20,16 @@ app.use((req, res, next) => {
 
 app.use("/generate-post", generatePostRoutes);
 
+app.use((err, req, res, next) => {
+  const errStatus = err.statusCode || 500;
+  const errMsg = err.message || "Something went wrong, please try again";
+  res.status(errStatus).json({
+    success: false,
+    status: errStatus,
+    message: errMsg,
+  });
+});
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
