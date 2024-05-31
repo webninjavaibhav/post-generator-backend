@@ -13,7 +13,6 @@ exports.postGenerator = async (req, res) => {
       }
     );
     const result = await response.json();
-    console.log("result", result);
     return res.json({ text: result?.[0]?.generated_text || "" });
   } catch (err) {
     next(err);
