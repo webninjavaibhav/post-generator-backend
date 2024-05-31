@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const generatePostRoutes = require("./routes/generate-post");
+const cors = require("cors");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -8,6 +9,7 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
