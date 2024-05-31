@@ -14,6 +14,7 @@ Ensure you have the following installed on your local machine:
 ## Installation
 Clone the repository:
    git clone https://github.com/yourusername/your-repo.git
+
    cd your-repo
 
 ## Folder Structure
@@ -25,4 +26,10 @@ Clone the repository:
 **routes/:** Defines the mapping of controllers to respective routes.
 
 **vercel.json:** Configuration file for deploying the server to Vercel.
+
+## Feedback
+Your feedback is invaluable to us! If you encounter any issues, have suggestions for improvement, or would like to share your thoughts, please don't hesitate to reach out to us.
+
+## Acknowledgments
+We would like to express our gratitude to the creators and maintainers of the tools, libraries, and frameworks that made this project possible. Thank you for your hard work and dedication!
 
